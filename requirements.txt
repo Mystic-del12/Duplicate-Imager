@@ -1,0 +1,4 @@
+Pillow
+imagehash
+tqdm
+send2trash
