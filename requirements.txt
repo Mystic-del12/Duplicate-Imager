@@ -1,4 +1,4 @@
 Pillow
 imagehash
 tqdm
-send2trash
+send2trashpillow-heif

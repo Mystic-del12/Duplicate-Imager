@@ -18,13 +18,14 @@ If you'd like new features (GUI, ML-based similarity, duplicate clustering, etc.
 
 | Feature | Description |
 |**🔍 Perceptual Hashing**| Finds images that look the same, regardless of file format, size, or slight edits. Uses **dHash** as the primary method with **pHash** as a fallback.  |
+| **📱 Modern Format Support** | Includes support for HEIC/HEIF images (modern iPhones) using the `pillow-heif` library. |
 | **🚀 Threaded Processing** | Hashing operations are implemented **multithreaded** for significantly faster performance on multi-core CPUs. |
 | **📊 Progress Indicators** | Utilizes **tqdm** to provide clear, real-time progress updates during hashing and processing. |
 | **🖼️ Interactive Preview** | User-friendly mode that opens duplicate images one-by-one in the default viewer, allowing for informed, manual decisions. |
 | **🗂️ Flexible Handling** | Duplicates can be **moved**, **copied**, or simply **logged**. |
 | **🛟 Safe Deletion** | Optional, reversible deletion capability using the `send2trash` library. |
 | **📑 CSV Reporting** | Creates a comprehensive duplicate file report suitable for analysis and external management. |
-| **⚙️ Automatic Selection** | Provides logic to automatically decide which file to keep (e.g., keeping the first, largest, or newest file). |
+| **⚙️ Automatic Selection** | Provides logic to automatically decide which file to keep (e.g., keeping the first, largest, newest, or highest `resolution` file). |
 | **💾 Backup Folder** | Ability to organize and save all duplicates together by their hash into a designated backup location. |
 | **🛡️ Dry Run Mode** | Safely simulates all actions without making any permanent changes. |
 | **💻 Cross-platform** | Fully supported on **Windows, macOS, and Linux**. |

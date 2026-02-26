@@ -53,11 +53,17 @@ except Exception:
     print("Missing required libraries. Install with: pip install pillow imagehash")
     raise
 
+# Support for HEIF/HEIC format (e.g., modern iPhones)
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except ImportError:
+    pass
+
 # tqdm for progress bars; fallback to a dummy if not installed
 try:
     from tqdm import tqdm
 except Exception:
-    # minimal fallback so code still runs if tqdm isn't available
     def tqdm(iterable=None, **kwargs):
         return iterable if iterable is not None else []
     print("tqdm not installed; progress bars will be disabled. Install with: pip install tqdm")
@@ -69,8 +75,7 @@ try:
 except Exception:
     _HAVE_SEND2TRASH = False
 
-# Allowed image file extensions (lowercase)
-IMAGE_EXTS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.tif', '.webp'}
+IMAGE_EXTS = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.tif', '.webp', '.heic', '.heif'}
 
 
 # ----------------------------
@@ -137,12 +142,22 @@ def group_hashes(hash_list: List[Tuple[Path, imagehash.ImageHash]], threshold: i
     return result
 
 
+def get_image_resolution(path: Path) -> int:
+    """Return the total number of pixels (width * height) for an image, or 0 on error."""
+    try:
+        with Image.open(path) as img:
+            return img.width * img.height
+    except Exception:
+        return 0
+
+
 def choose_keep_file(paths: List[Path], strategy: str) -> Path:
     """
     Choose which file to keep in a group based on strategy:
     - 'first'   : keep the first in sorted order
     - 'largest' : keep file with largest size
     - 'newest'  : keep file with newest mtime
+    - 'resolution': keep file with the highest resolution
     """
     if strategy == 'first':
         return paths[0]
@@ -150,6 +165,8 @@ def choose_keep_file(paths: List[Path], strategy: str) -> Path:
         return max(paths, key=lambda p: p.stat().st_size)
     if strategy == 'newest':
         return max(paths, key=lambda p: p.stat().st_mtime)
+    if strategy == 'resolution':
+        return max(paths, key=get_image_resolution)
     return paths[0]
 
 
@@ -257,7 +274,7 @@ def main():
     parser = argparse.ArgumentParser(description="Find and handle duplicate/similar images by perceptual hash.")
     parser.add_argument('root', type=Path, help="Root folder to scan")
     parser.add_argument('--threshold', type=int, default=9, help="Hamming distance threshold (lower = more strict)")
-    parser.add_argument('--keep', choices=['first', 'largest', 'newest'], default='first',
+    parser.add_argument('--keep', choices=['first', 'largest', 'newest', 'resolution'], default='first',
                         help="Which file to keep in each group")
     parser.add_argument('--action', choices=['move', 'copy', 'report'], default='move',
                         help="Action for duplicates (excluding kept file)")
