@@ -39,8 +39,8 @@ To set up the Duplicate Photo Remover, follow the steps below:
 Open your terminal or command prompt and execute the following commands:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/duplicate-photo-remover.git
-cd duplicate-photo-remover
+git clone https://github.com/YOUR_USERNAME/Duplicate-Imager.git
+cd Duplicate-Imager
 ```
 ⭐ If you found this tool useful, please star the repository!
 
