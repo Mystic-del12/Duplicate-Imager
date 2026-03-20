@@ -50,15 +50,12 @@ It helps others discover the project.
 
 ## ⭐ Star History
 
-<details>
-  <summary><b>View star growth (pencil / sketch style)</b></summary>
-  <br />
-
 ## Star History
 
+<a href="https://www.star-history.com/?repos=Mystic-del12%2FDuplicate-Imager&type=date&legend=top-left">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&theme=dark&legend=top-left" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&legend=top-left" />
    <img alt="Star History Chart" src="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&legend=top-left" />
  </picture>
- 
+</a>
