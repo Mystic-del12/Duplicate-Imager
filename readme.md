@@ -19,7 +19,7 @@ If you'd like new features (GUI, ML-based similarity, duplicate clustering, etc.
 | Feature | Description |
 |**🔍 Perceptual Hashing**| Finds images that look the same, regardless of file format, size, or slight edits. Uses **dHash** as the primary method with **pHash** as a fallback.  |
 | **📱 Modern Format Support** | Includes support for HEIC/HEIF images (modern iPhones) using the `pillow-heif` library. |
-| **🚀 Threaded Processing** | Hashing operations are implemented **multithreaded** for significantly faster performance on multi-core CPUs. |
+| **🚀 Threaded Processing** | Hashing operations are implemented **multithreaded** for significantly faster processing on multi-core CPUs. |
 | **📊 Progress Indicators** | Utilizes **tqdm** to provide clear, real-time progress updates during hashing and processing. |
 | **🖼️ Interactive Preview** | User-friendly mode that opens duplicate images one-by-one in the default viewer, allowing for informed, manual decisions. |
 | **🗂️ Flexible Handling** | Duplicates can be **moved**, **copied**, or simply **logged**. |
@@ -45,3 +45,32 @@ cd Duplicate-Imager
 ⭐ If you found this tool useful, please star the repository!
 
 It helps others discover the project.
+
+---
+
+## ⭐ Star History
+
+<details>
+  <summary><b>View star growth (pencil / sketch style)</b></summary>
+  <br />
+
+  <!--
+    Option B: "pencil" vibe without adding new assets.
+    - Uses the Star History SVG, styled to look like a sketch (grayscale + contrast)
+    - Wrapped with an ASCII "frame" to reinforce the pencil-art feel.
+  -->
+
+  <pre>
+  .--------------------------------------------------------------.
+  |                      Star History (Sketch)                   |
+  '--------------------------------------------------------------'
+  </pre>
+
+  <a href="https://star-history.com/#Mystic-del12/Duplicate-Imager&Date" title="Star History">
+    <img
+      alt="Star History Chart"
+      src="https://api.star-history.com/svg?repos=Mystic-del12/Duplicate-Imager&type=Date"
+      style="filter: grayscale(1) contrast(1.35) brightness(1.05);"
+    />
+  </a>
+</details>
