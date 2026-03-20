@@ -54,23 +54,11 @@ It helps others discover the project.
   <summary><b>View star growth (pencil / sketch style)</b></summary>
   <br />
 
-  <!--
-    Option B: "pencil" vibe without adding new assets.
-    - Uses the Star History SVG, styled to look like a sketch (grayscale + contrast)
-    - Wrapped with an ASCII "frame" to reinforce the pencil-art feel.
-  -->
+## Star History
 
-  <pre>
-  .--------------------------------------------------------------.
-  |                      Star History (Sketch)                   |
-  '--------------------------------------------------------------'
-  </pre>
-
-  <a href="https://star-history.com/#Mystic-del12/Duplicate-Imager&Date" title="Star History">
-    <img
-      alt="Star History Chart"
-      src="https://api.star-history.com/svg?repos=Mystic-del12/Duplicate-Imager&type=Date"
-      style="filter: grayscale(1) contrast(1.35) brightness(1.05);"
-    />
-  </a>
-</details>
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=Mystic-del12/Duplicate-Imager&type=date&legend=top-left" />
+ </picture>
+ 
