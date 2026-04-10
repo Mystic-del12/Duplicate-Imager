@@ -28,7 +28,7 @@ Project maintainers are responsible for clarifying and enforcing this Code of Co
 
 ## Reporting
 
-If you experience or witness unacceptable behavior, please contact the maintainers privately by email. Reports will be reviewed promptly and handled with discretion.
+If you experience or witness unacceptable behavior, please contact the maintainers privately using the email address listed on the repository owner's GitHub profile. Reports will be reviewed promptly and handled with discretion.
 
 ## Scope
 
