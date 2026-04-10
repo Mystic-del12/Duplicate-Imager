@@ -13,6 +13,7 @@ See LICENSE for details.
 
 Pull requests & suggestions are welcome!
 If you'd like new features (GUI, ML-based similarity, duplicate clustering, etc.), open an issue.
+Please review [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
 
 ## ✨ Key Features
 
