@@ -287,6 +287,9 @@ def main():
                         help="Interactive preview mode: open images one-by-one and ask which to keep")
     args = parser.parse_args()
 
+    if args.threads < 1:
+        parser.error("--threads must be a positive integer")
+
     root = args.root.resolve()
     if not root.exists() or not root.is_dir():
         print("Root folder must exist and be a directory.")
